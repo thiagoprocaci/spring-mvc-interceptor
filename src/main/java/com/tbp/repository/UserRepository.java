@@ -8,8 +8,15 @@ import java.util.Map;
 @Component
 public class UserRepository {
 
-    static Map<Integer, User> personMap = new HashMap<>();
+    static Map<Integer, User> userMap = new HashMap<>();
     static Integer count = 0;
+
+    static {
+        User u = new User("user", "123", "Ordinary");
+        u.setId(count);
+        userMap.put(count, u);
+        count++;
+    }
 
 
     public void save(User user) {
@@ -17,19 +24,19 @@ public class UserRepository {
             user.setId(count);
             count++;
         }
-        personMap.put(user.getId(), user);
+        userMap.put(user.getId(), user);
     }
 
     public void delete(Integer name) {
-        personMap.remove(name);
+        userMap.remove(name);
     }
 
     public User getById(Integer id) {
-        return personMap.get(id);
+        return userMap.get(id);
     }
 
     public User getByUsername(String username) {
-        for(User u : personMap.values()) {
+        for(User u : userMap.values()) {
             if(u.getUsername().equals(username)) {
                 return u;
             }
