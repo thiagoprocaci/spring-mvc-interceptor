@@ -13,22 +13,18 @@
 <body>
     <div class="container">
         <h2>
-            Create your account
+            Login
         </h2>
 
                 <c:if test="${message != null}">
                         <h3>
-                        <c:out value="${message}" />
-                              <c:if test="${success == true}">
-                                 <br>
-                                 <a href="<%=request.getContextPath()%>/login/doLogin">Login in here</a>
-                              </c:if>
+                            <c:out value="${message}" />
                         </h3>
 
                 </c:if>
-               <c:if test="${success == false}">
 
-                <form method="post" action="<%=request.getContextPath()%>/user/create" class="form-horizontal">
+
+                <form method="post" action="<%=request.getContextPath()%>/login/doLogin" class="form-horizontal">
                     <div class="form-group form-group-lg">
                         <label for="username" class="col-sm-2 control-label">Name:</label>
                         <div class="col-sm-10">
@@ -41,21 +37,14 @@
                             <input type="password" id="password" class="form-control" name="password"  >
                         </div>
                     </div>
-                    <div class="form-group form-group-lg">
-                        <label for="profile" class="col-sm-2 control-label">Profile</label>
-                         <div class="col-sm-10">
-                              <select class="form-control" id="profile" name="profile">
-                                <option selected>Ordinary</option>
-                                <option>Moderator</option>
-                              </select>
-                          </div>
-                    </div>
+
                     <div style="float:right">
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                 </form>
 
-                </c:if>
+                 <br ><br >
+                 <a href="<%=request.getContextPath()%>/user/create">Create your account</a>
 
     </div>
 

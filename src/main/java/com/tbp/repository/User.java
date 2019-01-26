@@ -3,12 +3,12 @@ package com.tbp.repository;
 public class User {
 
     Integer id;
-    String name;
+    String username;
     String password;
     String profile;
 
-    public User(String name, String password, String profile) {
-        this.name = name;
+    public User(String username, String password, String profile) {
+        this.username = username;
         this.password = password;
         this.profile = profile;
     }
@@ -25,12 +25,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
