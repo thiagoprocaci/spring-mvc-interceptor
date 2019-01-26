@@ -8,17 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.Map;
 
-@Controller
-@RequestMapping("secure")
+
 public class SecureController {
 
-    @Autowired
-    UserSession userSession;
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
-    public String main(Map<String, Object> model) {
-        model.put("user", userSession.getLoggedUser());
-        return "secure/mainPage";
-    }
 
 }
