@@ -21,7 +21,7 @@
                         <c:out value="${message}" />
                               <c:if test="${success == true}">
                                  <br>
-                                 <a href="<%=request.getContextPath()%>/login/doLogin">Login in here</a>
+                                 <a href="<%=request.getContextPath()%>/login/doLogin">Login here</a>
                               </c:if>
                         </h3>
 
