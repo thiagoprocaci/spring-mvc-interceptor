@@ -19,4 +19,8 @@ public class UserSession {
         return user;
     }
 
+    public void removeLoggedUser() {
+        this.user = null;
+    }
+
 }
