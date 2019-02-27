@@ -50,6 +50,7 @@
                               <select class="form-control" id="profile" name="profile">
                                 <option selected>Ordinary</option>
                                 <option>Moderator</option>
+                                <option>Admin</option>
                               </select>
                           </div>
                     </div>
